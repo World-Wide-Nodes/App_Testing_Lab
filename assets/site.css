@@ -401,6 +401,14 @@ img, svg { max-width: 100%; }
 @media (min-width: 640px) { .card-progress { padding: 32px; } }
 .card-progress h3 { font-size: clamp(1.3125rem, 1.2rem + 0.5vw, 1.625rem); margin-bottom: 8px; }
 .card-progress .request { color: var(--text-2); }
+/* On the home page the whole in-progress card is a link, as a published card is; the request
+   link inside it stays on top so it can still be followed. */
+.card-linked { transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s; }
+.card-linked:hover { border-color: var(--brand-soft-2); box-shadow: var(--shadow-2); transform: translateY(-2px); }
+.card-linked h3 a { color: var(--text); text-decoration: none; }
+.card-linked h3 a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.card-linked h3 a:hover { text-decoration: underline; }
+.card-linked .request a { position: relative; z-index: 1; }
 .progress-now { margin: 0 0 6px; padding: 12px 16px; border-radius: 12px; background: var(--surface-2);
   color: var(--text-2); }
 .progress-now strong { color: var(--text); }

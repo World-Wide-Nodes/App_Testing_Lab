@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>How we test · Proofbench</title>
+<meta name="description" content="The eight steps behind every comparison.">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="../"><span class="brand-mark" aria-hidden="true"></span>Proofbench</a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="../">Comparisons</a></li>
+        <li><a href="../method/" aria-current="page">How we test</a></li>
+        <li><a href="../makers/">For app makers</a></li>
+        <li><a href="../about/">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<header class="page-head">
+  <div class="wrap">
+    <p class="kicker">How we test</p>
+    <h1>The same checks for every app, in eight steps</h1>
+    <p class="lead">Each comparison follows these steps, in this order. Each comparison page also lists its own checks, so anyone can repeat them.</p>
+  </div>
+</header>
+
+<div class="wrap prose">
+  <ol class="steps">
+    <li>
+      <h2>Pick a request with look-alike apps</h2>
+      <p>We start from a popular feature request on Atlassian's public request tracker that several store apps claim to answer. We note its votes and watchers on the day we read them.</p>
+    </li>
+    <li>
+      <h2>Tell the makers first</h2>
+      <p>Before we test, we tell each maker what we will check. We read each app's terms. If they do not allow us to publish results, we ask the maker for consent, and without it we list the app as not tested and say why.</p>
+    </li>
+    <li>
+      <h2>Ask first where the terms are unclear</h2>
+      <p>Where an app's terms do not clearly allow publishing test results, we ask its maker first and publish only after a yes. Until then, and if the answer is no, we list the app as not tested and say why.</p>
+    </li>
+    <li>
+      <h2>Install each app on our own test site</h2>
+      <p>We install each app on a Confluence site that belongs to the lab, on the plan named on the comparison page. We never test on a customer's site or a maker's own systems.</p>
+    </li>
+    <li>
+      <h2>Run the same checks</h2>
+      <p>Every app gets the same pages and the same checks, run by the same scripts. We save what we read from the site as evidence, such as the page order after each check.</p>
+    </li>
+    <li>
+      <h2>Show each maker their results before publishing</h2>
+      <p>Each maker sees their own results first and has three working days to correct a fact or object. A correction we can confirm changes the result; an objection is shown next to it.</p>
+    </li>
+    <li>
+      <h2>Publish</h2>
+      <p>We publish what each app does and does not do, with the evidence, the version we tested and the date. Reading is free.</p>
+    </li>
+    <li>
+      <h2>Correct openly</h2>
+      <p>If we got something wrong, we fix it within three working days and add a dated note to the page. We never change a result without saying so.</p>
+    </li>
+  </ol>
+
+  <section class="section" aria-labelledby="results-title">
+    <h2 id="results-title">How to read a result</h2>
+    <ul class="legend">
+      <li><span class="pill pill-pass">Passed</span> The app did what the check asks.</li>
+      <li><span class="pill pill-partial">Partly</span> The app did some of it. The note says which part.</li>
+      <li><span class="pill pill-fail">Failed</span> The app did not do it.</li>
+      <li><span class="pill pill-na">Could not run</span> The check could not run on this app, for example because it has no such setting. It is left out of the count.</li>
+    </ul>
+    <p>A count such as <em>4 of 5 checks</em> means four checks passed out of the five that could run.</p>
+  </section>
+
+  <section class="section" aria-labelledby="not-title">
+    <h2 id="not-title">What we do not measure</h2>
+    <p>We report what each app does, not how fast it does it. Speed on our test site says little about speed on yours, so we publish no speed figures.</p>
+  </section>
+
+  <section class="section" aria-labelledby="money-title">
+    <h2 id="money-title">Who pays for this</h2>
+    <p>Makers can pay for deeper private reports and re-tests, never for results. <a href="../makers/">What makers can buy</a> · <a href="../about/">About the lab</a></p>
+  </section>
+</div>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <p class="foot-name">Proofbench</p>
+      <p>An independent test lab for Confluence apps.</p>
+    </div>
+    <div>
+      <p><strong>Not affiliated with Atlassian.</strong> Atlassian and Confluence are trademarks of Atlassian.</p>
+      <p><strong>Makers can pay for deeper private reports and re-tests, never for results.</strong>
+        <a href="../makers/">What makers can buy</a></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

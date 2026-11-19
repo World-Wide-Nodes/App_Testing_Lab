@@ -4,20 +4,64 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f0edfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15143a" media="(prefers-color-scheme: dark)">
 <title>For app makers · Proofbench</title>
-<meta name="description" content="What app makers can and cannot buy from the lab.">
+<meta name="description" content="What app makers get free, what they can buy (a private report, a re-test or a priority test) and what is never for sale.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Proofbench">
+<meta property="og:title" content="For app makers">
+<meta property="og:description" content="What app makers get free, what they can buy (a private report, a re-test or a priority test) and what is never for sale.">
+<meta property="og:url" content="https://world-wide-nodes.github.io/App_Testing_Lab/makers/">
+<meta property="og:image" content="https://world-wide-nodes.github.io/App_Testing_Lab/assets/share-proofbench.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Proofbench: which Confluence app really does what you asked for? The same checks for every app, and results are never for sale.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://world-wide-nodes.github.io/App_Testing_Lab/assets/share-proofbench.png">
+<meta name="twitter:image:alt" content="Proofbench: which Confluence app really does what you asked for? The same checks for every app, and results are never for sale.">
+<meta name="twitter:title" content="For app makers">
+<meta name="twitter:description" content="What app makers get free, what they can buy (a private report, a re-test or a priority test) and what is never for sale.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-pass" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-partial" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M12 4.5a7.5 7.5 0 0 0 0 15z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-fail" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></symbol>
+  <symbol id="i-na" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M6.8 17.2L17.2 6.8"/></symbol>
+  <symbol id="i-dash" viewBox="0 0 24 24"><path d="M7 12h10"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4.5h5.5V10M19.5 4.5L11 13M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.8v.2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7.5l8 5.5 8-5.5"/></symbol>
+  <symbol id="i-checklist" viewBox="0 0 24 24"><path d="M4 6.5l1.6 1.6L8.8 5M4 12.5l1.6 1.6 3.2-3.1M4 18.5l1.6 1.6 3.2-3.1M12 7h8M12 13h8M12 19h8"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7.5h14M12 4.5l-7 3M12 4.5l7 3M5 7.5l-2.5 6h5zM19 7.5l-2.5 6h5z"/></symbol>
+  <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M16.5 3.5l3 3-3 3M4.5 11.5v-1a4 4 0 0 1 4-4h11M7.5 20.5l-3-3 3-3M19.5 12.5v1a4 4 0 0 1-4 4h-11"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5l5 5"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8.5 7l-5 5 5 5M15.5 7l5 5-5 5M13.5 4.5l-3 15"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-reply" viewBox="0 0 24 24"><path d="M5.5 19.5v-3.5h-1A1.5 1.5 0 0 1 3 14.5v-9A1.5 1.5 0 0 1 4.5 4h15A1.5 1.5 0 0 1 21 5.5v9a1.5 1.5 0 0 1-1.5 1.5H9.5z"/><path d="M7.5 8.5h9M7.5 12h6"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="M8.6 13.3L7.5 20.5l4.5-2.4 4.5 2.4-1.1-7.2"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.3 12.3l2.6 2.6 4.9-5.3"/></symbol>
+  <symbol id="i-report" viewBox="0 0 24 24"><path d="M14 3.5H7A1.5 1.5 0 0 0 5.5 5v14A1.5 1.5 0 0 0 7 20.5h10a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3.5V8h4.5M9 12.5h6M9 16h6"/></symbol>
+  <symbol id="i-retest" viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 1 1-2.3-5.4M19.5 4.5V9H15"/><path d="M9 12.3l2 2 4-4.3"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14.5" rx="2"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4M12 13v4M10 15h4"/></symbol>
+  <symbol id="i-site" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="12" rx="2"/><path d="M8.5 20h7M12 16.5V20"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5.5 21V4.5M5.5 5h11l-2.5 4 2.5 4h-11"/></symbol>
+</svg>
 <a class="skip" href="#main">Skip to the content</a>
 <header class="top">
   <div class="wrap top-row">
-    <a class="brand" href="../"><span class="brand-mark" aria-hidden="true"></span>Proofbench</a>
-    <nav aria-label="Main">
+    <a class="brand" href="../"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect class="brand-tile" width="32" height="32" rx="8"/><g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="2.8" d="M10.6 12.4l3.5 3.5 7.3-7.7"/><path stroke-width="2.4" d="M7.5 20.6h17M10.7 20.6v3.3M21.3 20.6v3.3"/></g></svg><span>Proofbench</span></a>
+    <nav class="site-nav" aria-label="Main">
       <ul class="nav">
         <li><a href="../">Comparisons</a></li>
         <li><a href="../method/">How we test</a></li>
-        <li><a href="../makers/" aria-current="page">For app makers</a></li>
+        <li><a href="../makers/" aria-current="page"><span class="nav-long">For app makers</span><span class="nav-short" aria-hidden="true">Makers</span></a></li>
         <li><a href="../about/">About</a></li>
       </ul>
     </nav>
@@ -29,69 +73,164 @@
     <p class="kicker">For app makers</p>
     <h1>You can pay for depth and speed, never for a better result</h1>
     <p class="lead">Rank, verdict and wording are never for sale. What you can buy is more detail, a fresh test after you fix something, or an earlier test of a new app.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="mailto:proofbench.lab@proton.me?subject=Question%20from%20an%20app%20maker"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Write to the lab</a>
+      <a class="btn btn-secondary" href="#free">What every maker gets free</a>
+    </div>
   </div>
 </header>
 
-<div class="wrap">
-  <section class="section" aria-labelledby="buy-title">
-    <h2 id="buy-title">What you can buy</h2>
-    <div class="offers">
-      <div class="offer"><h3>Private full report</h3><p class="price">49 euros</p><p>Every check with its full evidence and notes, for your team only. It holds the same results as the public page.</p></div>
-      <div class="offer"><h3>Re-test after a fix</h3><p class="price">29 euros</p><p>We run the same checks on your new version. The public page shows the new result, whatever it is, with a dated note.</p></div>
-      <div class="offer"><h3>Priority test of a new app</h3><p class="price">79 euros</p><p>We test your new app sooner, the same way as every other app. Paying moves the date, not the result.</p></div>
-      <div class="offer offer-free"><h3>Badge</h3><p class="price">Free</p><p>A badge with your real result for your store listing or website. Every tested app gets one.</p></div>
+<section class="section" id="buy" aria-labelledby="buy-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">What you can buy</p>
+      <h2 id="buy-title">Three ways to go further</h2>
+      <p class="lead">Each one uses the same method and the same checks as every other app. None of them changes a result.</p>
     </div>
-    <p class="note">Prices in euros. These are our first prices and may change; the price we agree with you is the price you pay.</p>
-  </section>
+    <div class="offers">
+      <article class="offer">
+        <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-report"/></svg></span>
+        <h3>Private full report</h3>
+        <p class="price">49 euros</p>
+        <p class="offer-what">All the evidence behind your result.</p>
+        <ul class="ticks"><li>Every check with its full evidence and notes</li><li>The same results as the public page</li><li>For your team only</li></ul>
+        <a class="btn btn-primary" href="mailto:proofbench.lab@proton.me?subject=Private%20full%20report%20request"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Ask for a private report</a>
+      </article>
+      <article class="offer">
+        <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-retest"/></svg></span>
+        <h3>Re-test after a fix</h3>
+        <p class="price">29 euros</p>
+        <p class="offer-what">We run the same checks on your new version.</p>
+        <ul class="ticks"><li>The same checks on your new version</li><li>The new result is published, whatever it is</li><li>A dated note on the page records the re-test</li></ul>
+        <a class="btn btn-primary" href="mailto:proofbench.lab@proton.me?subject=Re-test%20request"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Ask for a re-test</a>
+      </article>
+      <article class="offer">
+        <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+        <h3>Priority test of a new app</h3>
+        <p class="price">79 euros</p>
+        <p class="offer-what">We test your new app sooner, the same way as every other app.</p>
+        <ul class="ticks"><li>An earlier test date for your new app</li><li>The same method and the same checks</li><li>Paying moves the date, not the result</li></ul>
+        <a class="btn btn-primary" href="mailto:proofbench.lab@proton.me?subject=Priority%20test%20request"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Ask for a priority test</a>
+      </article>
+    </div>
+    <p class="note offers-note">Prices in euros. These are our first prices and may change; the price we agree with you is the price you pay.</p>
+  </div>
+</section>
 
-  <section class="section never" aria-labelledby="never-title">
-    <h2 id="never-title">What is never for sale</h2>
-    <ul class="crosses">
-      <li>A better result, a higher place or kinder wording. Rank, verdict and wording are never for sale.</li>
-      <li>Leaving a result out, or removing an app from a comparison.</li>
-      <li>A place on the page: an app is included because it claims to answer the request, paid or not.</li>
-    </ul>
-  </section>
-
-  <section class="section" aria-labelledby="before-title">
-    <h2 id="before-title">What every maker gets, free</h2>
-    <ul class="ticks">
-      <li>A notice before we test, saying what we will check.</li>
-      <li>Your own results before anyone else, with three working days to correct a fact or object.</li>
-      <li>Your objection shown next to the result, if you make one.</li>
-      <li>A badge with your app's real result.</li>
-    </ul>
-  </section>
-
-  <section class="section" aria-labelledby="badge-title">
-    <h2 id="badge-title">Get your free badge</h2>
-    <p>Every tested app gets a badge with its real count, whatever the result. Nothing to buy, nothing to sign.</p>
-    <figure class="badge-sample"><svg xmlns="http://www.w3.org/2000/svg" width="325" height="22" viewBox="0 0 325 22" role="img" aria-label="Example app: Tested by Proofbench, 4 of 5 checks, November 2026"><title>Example app: Tested by Proofbench, 4 of 5 checks, November 2026</title><clipPath id="r"><rect width="325" height="22" rx="4"/></clipPath><g clip-path="url(#r)"><rect width="138" height="22" fill="#2f3a47"/><rect x="138" width="187" height="22" fill="#1f5f8b"/></g><g fill="#fff" font-family="Verdana,DejaVu Sans,Geneva,sans-serif" font-size="11"><text x="8" y="15" textLength="122" lengthAdjust="spacingAndGlyphs">Tested by Proofbench</text><text x="146" y="15" textLength="171" lengthAdjust="spacingAndGlyphs">4 of 5 checks, November 2026</text></g></svg>
-
-      <figcaption>An example badge. Yours shows your own count and the month we tested.</figcaption>
-    </figure>
-    <ol class="numbered">
-      <li>Open your app's comparison page and find your app under <em>What each app did</em>.</li>
-      <li>Follow the <em>Badge</em> link. That image is your badge.</li>
-      <li>Show it on your store listing or website, linked to the comparison page, so buyers can check it.</li>
-    </ol>
-    <p class="note">The badge always shows the latest published result. After a re-test it updates on its own.</p>
-  </section>
-
-  <section class="section" aria-labelledby="order-title">
-    <h2 id="order-title">How to order</h2>
-    <p>Write to <a href="mailto:proofbench.lab@proton.me">proofbench.lab@proton.me</a>.</p>
-  </section>
+<section class="section section-alt" id="badge" aria-labelledby="badge-title">
+  <div class="wrap badge-grid">
+    <div>
+      <p class="kicker">Free for every tested app</p>
+      <h2 id="badge-title">Get your free badge</h2>
+      <p>Every tested app gets a badge with its real count, whatever the result. Nothing to buy, nothing to sign.</p>
+      <ol class="numbered">
+        <li>Open your app's comparison page and find your app under <em>What each app did</em>.</li>
+        <li>Follow the <em>Badge</em> link. That image is your badge.</li>
+        <li>Show it on your store listing or website, linked to the comparison page, so buyers can check it.</li>
+      </ol>
+      <p class="note">The badge always shows the latest published result. After a re-test it updates on its own.</p>
+    </div>
+    <figure class="badge-stage">
+      <div class="badge-tile badge-tile-light"><svg xmlns="http://www.w3.org/2000/svg" width="340" height="22" viewBox="0 0 340 22" role="img" aria-label="Example app: Tested by Proofbench, 4 of 5 checks, November 2026"><title>Example app: Tested by Proofbench, 4 of 5 checks, November 2026</title><rect width="340" height="22" rx="4" fill="#5b3fd6"/><path d="M4 0H153V22H4A4 4 0 0 1 0 18V4A4 4 0 0 1 4 0Z" fill="#26213f"/><g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.7 0 0 0.7 0.8 -0.24)"><path stroke-width="2.8" d="M10.6 12.4l3.5 3.5 7.3-7.7"/><path stroke-width="2.4" d="M7.5 20.6h17M10.7 20.6v3.3M21.3 20.6v3.3"/></g><g fill="#fff" font-family="Verdana,DejaVu Sans,Geneva,sans-serif" font-size="11"><text x="23" y="15" textLength="122" lengthAdjust="spacingAndGlyphs">Tested by Proofbench</text><text x="161" y="15" textLength="171" lengthAdjust="spacingAndGlyphs">4 of 5 checks, November 2026</text></g></svg>
 </div>
+      <div class="badge-tile badge-tile-dark"><svg xmlns="http://www.w3.org/2000/svg" width="340" height="22" viewBox="0 0 340 22" aria-hidden="true"><title>Example app: Tested by Proofbench, 4 of 5 checks, November 2026</title><rect width="340" height="22" rx="4" fill="#5b3fd6"/><path d="M4 0H153V22H4A4 4 0 0 1 0 18V4A4 4 0 0 1 4 0Z" fill="#26213f"/><g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.7 0 0 0.7 0.8 -0.24)"><path stroke-width="2.8" d="M10.6 12.4l3.5 3.5 7.3-7.7"/><path stroke-width="2.4" d="M7.5 20.6h17M10.7 20.6v3.3M21.3 20.6v3.3"/></g><g fill="#fff" font-family="Verdana,DejaVu Sans,Geneva,sans-serif" font-size="11"><text x="23" y="15" textLength="122" lengthAdjust="spacingAndGlyphs">Tested by Proofbench</text><text x="161" y="15" textLength="171" lengthAdjust="spacingAndGlyphs">4 of 5 checks, November 2026</text></g></svg>
+</div>
+      <figcaption>An example badge, drawn by the same code as the real ones. Yours shows your own count and the month we tested.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="free" aria-labelledby="free-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Free for every maker</p>
+      <h2 id="free-title">What every maker gets, free</h2>
+    </div>
+    <ul class="free">
+      <li><span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+        <div><h3>A notice before we test</h3><p>It says what we will check.</p></div></li>
+      <li><span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg></span>
+        <div><h3>Your results first</h3><p>Before anyone else, with three working days to correct a fact or object.</p></div></li>
+      <li><span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-reply"/></svg></span>
+        <div><h3>Your objection shown</h3><p>Next to the result, if you make one.</p></div></li>
+      <li><span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-badge"/></svg></span>
+        <div><h3>A badge with your app's real result</h3><p>For your store listing or website, whatever the result.</p></div></li>
+    </ul>
+
+    <div class="block never" aria-labelledby="never-title">
+      <div>
+        <h2 id="never-title">What is never for sale</h2>
+        <p>Money never changes a result, a rank or a sentence.</p>
+      </div>
+      <ul class="crosses">
+        <li>A better result, a higher place or kinder wording.</li>
+        <li>Leaving a result out, or removing an app from a comparison.</li>
+        <li>A place on the page: an app is included because it claims to answer the request, paid or not.</li>
+      </ul>
+    </div>
+
+    <div class="block" aria-labelledby="faq-title">
+      <div class="section-head">
+        <p class="kicker">Questions</p>
+        <h2 id="faq-title">What makers ask us</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Do you need my permission to test my app? <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+          <p>We read your app's terms first. If they allow publishing test results, we test it like every other app. If they do not, or they are unclear, we ask you first and publish only after a yes. Without a yes, we list the app as not tested and say why.</p>
+        </details>
+        <details>
+          <summary>Can paying change my result? <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+          <p>No. A private report holds the same results as the public page. A re-test is published whatever it shows. A priority test moves the date, not the result.</p>
+        </details>
+        <details>
+          <summary>What if you get something wrong? <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+          <p>You see your results before anyone else and have three working days to correct a fact or object. A correction we can confirm changes the result, and an objection is shown next to it. After publishing, we correct a mistake within three working days and add a dated note to the page.</p>
+        </details>
+        <details>
+          <summary>Do I have to buy anything? <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+          <p>No. The notice, your results before publishing, your right of reply and the badge are free. An app is included because it claims to answer the request, whether its maker pays or not.</p>
+        </details>
+        <details>
+          <summary>Who sees a private report? <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+          <p>Only your team. It holds the same results as the public page, with all the evidence and notes behind them.</p>
+        </details>
+        <details>
+          <summary>How do I order? <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+          <p>Use a button on this page, or write to <a href="mailto:proofbench.lab@proton.me">proofbench.lab@proton.me</a>. Tell us which app and what you would like, and we reply to agree the details.</p>
+        </details>
+      </div>
+    </div>
+
+    <div class="block cta-band" aria-labelledby="order-title">
+      <div>
+        <h2 id="order-title">Questions, or ready to order?</h2>
+        <p>Tell us which app and what you would like. Paying moves the date or adds detail. It never changes a result.</p>
+        <p class="contact-line">Write to <a href="mailto:proofbench.lab@proton.me">proofbench.lab@proton.me</a>.</p>
+      </div>
+      <a class="btn btn-light" href="mailto:proofbench.lab@proton.me?subject=Question%20from%20an%20app%20maker"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Write to the lab</a>
+    </div>
+  </div>
+</section>
 
 </main>
 <footer class="foot">
   <div class="wrap foot-grid">
     <div>
-      <p class="foot-name">Proofbench</p>
-      <p>An independent test lab for Confluence apps.</p>
+      <a class="brand" href="../"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect class="brand-tile" width="32" height="32" rx="8"/><g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="2.8" d="M10.6 12.4l3.5 3.5 7.3-7.7"/><path stroke-width="2.4" d="M7.5 20.6h17M10.7 20.6v3.3M21.3 20.6v3.3"/></g></svg><span>Proofbench</span></a>
+      <p>An independent test lab for Confluence apps. Every app that claims to answer a request gets the same checks, and buyers read the results for free.</p>
     </div>
     <div>
+      <h2>The lab</h2>
+      <ul>
+        <li><a href="../method/">How we test</a></li>
+        <li><a href="../makers/">For app makers</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="../about/#report">Report a mistake</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Independence</h2>
       <p><strong>Not affiliated with Atlassian.</strong> Atlassian and Confluence are trademarks of Atlassian.</p>
       <p><strong>Makers can pay for deeper private reports and re-tests, never for results.</strong>
         <a href="../makers/">What makers can buy</a></p>

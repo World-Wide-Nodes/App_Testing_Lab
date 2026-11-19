@@ -4,20 +4,64 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f0edfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15143a" media="(prefers-color-scheme: dark)">
 <title>How we test · Proofbench</title>
-<meta name="description" content="The eight steps behind every comparison.">
+<meta name="description" content="The eight steps behind every comparison: the same checks for every app, makers told first, and a right of reply before anything is published.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Proofbench">
+<meta property="og:title" content="How we test">
+<meta property="og:description" content="The eight steps behind every comparison: the same checks for every app, makers told first, and a right of reply before anything is published.">
+<meta property="og:url" content="https://world-wide-nodes.github.io/App_Testing_Lab/method/">
+<meta property="og:image" content="https://world-wide-nodes.github.io/App_Testing_Lab/assets/share-proofbench.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Proofbench: which Confluence app really does what you asked for? The same checks for every app, and results are never for sale.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://world-wide-nodes.github.io/App_Testing_Lab/assets/share-proofbench.png">
+<meta name="twitter:image:alt" content="Proofbench: which Confluence app really does what you asked for? The same checks for every app, and results are never for sale.">
+<meta name="twitter:title" content="How we test">
+<meta name="twitter:description" content="The eight steps behind every comparison: the same checks for every app, makers told first, and a right of reply before anything is published.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-pass" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-partial" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M12 4.5a7.5 7.5 0 0 0 0 15z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-fail" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></symbol>
+  <symbol id="i-na" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M6.8 17.2L17.2 6.8"/></symbol>
+  <symbol id="i-dash" viewBox="0 0 24 24"><path d="M7 12h10"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4.5h5.5V10M19.5 4.5L11 13M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.8v.2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7.5l8 5.5 8-5.5"/></symbol>
+  <symbol id="i-checklist" viewBox="0 0 24 24"><path d="M4 6.5l1.6 1.6L8.8 5M4 12.5l1.6 1.6 3.2-3.1M4 18.5l1.6 1.6 3.2-3.1M12 7h8M12 13h8M12 19h8"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7.5h14M12 4.5l-7 3M12 4.5l7 3M5 7.5l-2.5 6h5zM19 7.5l-2.5 6h5z"/></symbol>
+  <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M16.5 3.5l3 3-3 3M4.5 11.5v-1a4 4 0 0 1 4-4h11M7.5 20.5l-3-3 3-3M19.5 12.5v1a4 4 0 0 1-4 4h-11"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5l5 5"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8.5 7l-5 5 5 5M15.5 7l5 5-5 5M13.5 4.5l-3 15"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-reply" viewBox="0 0 24 24"><path d="M5.5 19.5v-3.5h-1A1.5 1.5 0 0 1 3 14.5v-9A1.5 1.5 0 0 1 4.5 4h15A1.5 1.5 0 0 1 21 5.5v9a1.5 1.5 0 0 1-1.5 1.5H9.5z"/><path d="M7.5 8.5h9M7.5 12h6"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="M8.6 13.3L7.5 20.5l4.5-2.4 4.5 2.4-1.1-7.2"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.3 12.3l2.6 2.6 4.9-5.3"/></symbol>
+  <symbol id="i-report" viewBox="0 0 24 24"><path d="M14 3.5H7A1.5 1.5 0 0 0 5.5 5v14A1.5 1.5 0 0 0 7 20.5h10a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3.5V8h4.5M9 12.5h6M9 16h6"/></symbol>
+  <symbol id="i-retest" viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 1 1-2.3-5.4M19.5 4.5V9H15"/><path d="M9 12.3l2 2 4-4.3"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14.5" rx="2"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4M12 13v4M10 15h4"/></symbol>
+  <symbol id="i-site" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="12" rx="2"/><path d="M8.5 20h7M12 16.5V20"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5.5 21V4.5M5.5 5h11l-2.5 4 2.5 4h-11"/></symbol>
+</svg>
 <a class="skip" href="#main">Skip to the content</a>
 <header class="top">
   <div class="wrap top-row">
-    <a class="brand" href="../"><span class="brand-mark" aria-hidden="true"></span>Proofbench</a>
-    <nav aria-label="Main">
+    <a class="brand" href="../"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect class="brand-tile" width="32" height="32" rx="8"/><g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="2.8" d="M10.6 12.4l3.5 3.5 7.3-7.7"/><path stroke-width="2.4" d="M7.5 20.6h17M10.7 20.6v3.3M21.3 20.6v3.3"/></g></svg><span>Proofbench</span></a>
+    <nav class="site-nav" aria-label="Main">
       <ul class="nav">
         <li><a href="../">Comparisons</a></li>
         <li><a href="../method/" aria-current="page">How we test</a></li>
-        <li><a href="../makers/">For app makers</a></li>
+        <li><a href="../makers/"><span class="nav-long">For app makers</span><span class="nav-short" aria-hidden="true">Makers</span></a></li>
         <li><a href="../about/">About</a></li>
       </ul>
     </nav>
@@ -32,72 +76,130 @@
   </div>
 </header>
 
-<div class="wrap prose">
-  <ol class="steps">
-    <li>
-      <h2>Pick a request with look-alike apps</h2>
-      <p>We start from a popular feature request on Atlassian's public request tracker that several store apps claim to answer. We note its votes and watchers on the day we read them.</p>
-    </li>
-    <li>
-      <h2>Tell the makers first</h2>
-      <p>Before we test, we tell each maker what we will check. We read each app's terms. If they do not allow us to publish results, we ask the maker for consent, and without it we list the app as not tested and say why.</p>
-    </li>
-    <li>
-      <h2>Ask first where the terms are unclear</h2>
-      <p>Where an app's terms do not clearly allow publishing test results, we ask its maker first and publish only after a yes. Until then, and if the answer is no, we list the app as not tested and say why.</p>
-    </li>
-    <li>
-      <h2>Install each app on our own test site</h2>
-      <p>We install each app on a Confluence site that belongs to the lab, on the plan named on the comparison page. We never test on a customer's site or a maker's own systems.</p>
-    </li>
-    <li>
-      <h2>Run the same checks</h2>
-      <p>Every app gets the same pages and the same checks, run by the same scripts. We save what we read from the site as evidence, such as the page order after each check.</p>
-    </li>
-    <li>
-      <h2>Show each maker their results before publishing</h2>
-      <p>Each maker sees their own results first and has three working days to correct a fact or object. A correction we can confirm changes the result; an objection is shown next to it.</p>
-    </li>
-    <li>
-      <h2>Publish</h2>
-      <p>We publish what each app does and does not do, with the evidence, the version we tested and the date. Reading is free.</p>
-    </li>
-    <li>
-      <h2>Correct openly</h2>
-      <p>If we got something wrong, we fix it within three working days and add a dated note to the page. We never change a result without saying so.</p>
-    </li>
-  </ol>
-
-  <section class="section" aria-labelledby="results-title">
-    <h2 id="results-title">How to read a result</h2>
-    <ul class="legend">
-      <li><span class="pill pill-pass">Passed</span> The app did what the check asks.</li>
-      <li><span class="pill pill-partial">Partly</span> The app did some of it. The note says which part.</li>
-      <li><span class="pill pill-fail">Failed</span> The app did not do it.</li>
-      <li><span class="pill pill-na">Could not run</span> The check could not run on this app, for example because it has no such setting. It is left out of the count.</li>
-    </ul>
-    <p>A count such as <em>4 of 5 checks</em> means four checks passed out of the five that could run.</p>
-  </section>
-
-  <section class="section" aria-labelledby="not-title">
-    <h2 id="not-title">What we do not measure</h2>
-    <p>We report what each app does, not how fast it does it. Speed on our test site says little about speed on yours, so we publish no speed figures.</p>
-  </section>
-
-  <section class="section" aria-labelledby="money-title">
-    <h2 id="money-title">Who pays for this</h2>
-    <p>Makers can pay for deeper private reports and re-tests, never for results. <a href="../makers/">What makers can buy</a> · <a href="../about/">About the lab</a></p>
-  </section>
+<div class="wrap">
+  <aside class="callout head-callout" aria-labelledby="reply-title">
+    <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-reply"/></svg></span>
+    <div>
+      <h2 id="reply-title">If you make one of the apps: your right of reply</h2>
+      <ul class="ticks">
+        <li>We tell you before we test, and what we will check.</li>
+        <li>You see your own results before anyone else.</li>
+        <li>You have three working days to correct a fact or object.</li>
+        <li>A correction we can confirm changes the result. Your objection is shown next to it.</li>
+      </ul>
+      <p>None of this costs anything. <a href="../makers/">What every maker gets</a></p>
+    </div>
+  </aside>
 </div>
+
+<section class="section" aria-labelledby="steps-title">
+  <div class="wrap steps-layout">
+    <div>
+      <div class="section-head">
+        <p class="kicker">The steps</p>
+        <h2 id="steps-title">From request to published result</h2>
+      </div>
+      <ol class="steps" role="list">
+        <li>
+          <h3>Pick a request with look-alike apps</h3>
+          <p>We start from a popular feature request on Atlassian's public request tracker that several store apps claim to answer. We note its votes and watchers on the day we read them.</p>
+        </li>
+        <li>
+          <ul class="step-tags"><li>Makers</li></ul>
+          <h3>Tell the makers first</h3>
+          <p>Before we test, we tell each maker what we will check and how. We also read each app's terms.</p>
+        </li>
+        <li>
+          <ul class="step-tags"><li>Makers</li></ul>
+          <h3>Ask first where the terms are unclear</h3>
+          <p>Where an app's terms do not clearly allow publishing test results, we ask its maker first and publish only after a yes. Until then, and if the answer is no, we list the app as not tested and say why. After a yes, the result is published whatever it shows.</p>
+        </li>
+        <li>
+          <h3>Install each app on our own test site</h3>
+          <p>We install each app on a Confluence site that belongs to the lab, on the plan named on the comparison page. We never test on a customer's site or a maker's own systems.</p>
+        </li>
+        <li>
+          <h3>Run the same checks</h3>
+          <p>Every app gets the same pages and the same checks, run by the same scripts. We save what we read from the site as evidence, such as the page order after each check.</p>
+        </li>
+        <li class="step-key" id="reply">
+          <div class="step-body">
+            <ul class="step-tags"><li>Makers</li><li>Right of reply</li></ul>
+            <h3>Show each maker their results before publishing</h3>
+            <p>Each maker sees their own results first and has three working days to correct a fact or object. A correction we can confirm changes the result; an objection is shown next to it.</p>
+          </div>
+        </li>
+        <li>
+          <h3>Publish</h3>
+          <p>We publish what each app does and does not do, with the evidence, the version we tested and the date. Reading is free.</p>
+        </li>
+        <li>
+          <h3>Correct openly</h3>
+          <p>If we got something wrong, we fix it within three working days and add a dated note to the page. We never change a result without saying so.</p>
+        </li>
+      </ol>
+    </div>
+
+    <aside class="aside-card" aria-labelledby="results-title">
+      <h2 id="results-title">How to read a result</h2>
+      <ul class="legend">
+        <li><span class="pill pill-pass"><svg class="icon" aria-hidden="true"><use href="#i-pass"/></svg><span class="word">Passed</span></span><p>The app did what the check asks.</p></li>
+        <li><span class="pill pill-partial"><svg class="icon" aria-hidden="true"><use href="#i-partial"/></svg><span class="word">Partly</span></span><p>The app did some of it. The note says which part.</p></li>
+        <li><span class="pill pill-fail"><svg class="icon" aria-hidden="true"><use href="#i-fail"/></svg><span class="word">Failed</span></span><p>The app did not do it.</p></li>
+        <li><span class="pill pill-na"><svg class="icon" aria-hidden="true"><use href="#i-na"/></svg><span class="word">Could not run</span></span><p>The check could not run on this app, for example because it has no such setting. It is left out of the count.</p></li>
+        <li><span class="pill pill-na"><svg class="icon" aria-hidden="true"><use href="#i-na"/></svg><span class="word">Not tested</span></span><p>The app is listed, with the reason we could not test it.</p></li>
+      </ul>
+      <p class="note">A count such as <em>4 of 5 checks</em> means four checks passed out of the five that could run.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="rules-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">The rules</p>
+      <h2 id="rules-title">What we always do, and never do</h2>
+    </div>
+    <ul class="rules">
+      <li><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>Every app gets the same pages, the same checks and the same scripts.</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>We test only on the lab's own Confluence site.</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>An app is included because it claims to answer the request, whether its maker pays or not.</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>Money never changes a result, a rank or a sentence.</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>A paid re-test is published like any other, whatever it shows.</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>We never change a result without a dated note on the page.</li>
+    </ul>
+
+    <div class="block narrow">
+      <h2 id="not-title">What we do not measure</h2>
+      <p>We report what each app does, not how fast it does it. Speed on our test site says little about speed on yours, so we publish no speed figures.</p>
+      <h2 id="money-title">Who pays for this</h2>
+      <p>Makers can pay for deeper private reports and re-tests, never for results. Reading is free for everyone.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="../makers/">What makers can buy <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-secondary" href="../about/">About the lab</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 </main>
 <footer class="foot">
   <div class="wrap foot-grid">
     <div>
-      <p class="foot-name">Proofbench</p>
-      <p>An independent test lab for Confluence apps.</p>
+      <a class="brand" href="../"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect class="brand-tile" width="32" height="32" rx="8"/><g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="2.8" d="M10.6 12.4l3.5 3.5 7.3-7.7"/><path stroke-width="2.4" d="M7.5 20.6h17M10.7 20.6v3.3M21.3 20.6v3.3"/></g></svg><span>Proofbench</span></a>
+      <p>An independent test lab for Confluence apps. Every app that claims to answer a request gets the same checks, and buyers read the results for free.</p>
     </div>
     <div>
+      <h2>The lab</h2>
+      <ul>
+        <li><a href="../method/">How we test</a></li>
+        <li><a href="../makers/">For app makers</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="../about/#report">Report a mistake</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Independence</h2>
       <p><strong>Not affiliated with Atlassian.</strong> Atlassian and Confluence are trademarks of Atlassian.</p>
       <p><strong>Makers can pay for deeper private reports and re-tests, never for results.</strong>
         <a href="../makers/">What makers can buy</a></p>

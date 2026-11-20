@@ -6,25 +6,25 @@
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f0edfd" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#15143a" media="(prefers-color-scheme: dark)">
-<title>Proofbench: independent tests of Confluence apps</title>
-<meta name="description" content="Proofbench tests every Confluence app that claims to answer one popular request, with the same checks, and publishes what each app does and does not do.">
+<title>Proofbench: independent tests of Confluence and Jira apps</title>
+<meta name="description" content="Proofbench tests every Confluence or Jira app that claims to answer one popular request, with the same checks, and publishes what each app does and does not do.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Proofbench">
-<meta property="og:title" content="Proofbench: independent tests of Confluence apps">
-<meta property="og:description" content="Proofbench tests every Confluence app that claims to answer one popular request, with the same checks, and publishes what each app does and does not do.">
+<meta property="og:title" content="Proofbench: independent tests of Confluence and Jira apps">
+<meta property="og:description" content="Proofbench tests every Confluence or Jira app that claims to answer one popular request, with the same checks, and publishes what each app does and does not do.">
 <meta property="og:url" content="https://world-wide-nodes.github.io/App_Testing_Lab/">
 <meta property="og:image" content="https://world-wide-nodes.github.io/App_Testing_Lab/assets/share-proofbench.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Proofbench: which Confluence app really does what you asked for? The same checks for every app, and results are never for sale.">
+<meta property="og:image:alt" content="Proofbench: which Confluence or Jira app really does what you asked for? The same checks for every app, and results are never for sale.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://world-wide-nodes.github.io/App_Testing_Lab/assets/share-proofbench.png">
-<meta name="twitter:image:alt" content="Proofbench: which Confluence app really does what you asked for? The same checks for every app, and results are never for sale.">
-<meta name="twitter:title" content="Proofbench: independent tests of Confluence apps">
-<meta name="twitter:description" content="Proofbench tests every Confluence app that claims to answer one popular request, with the same checks, and publishes what each app does and does not do.">
+<meta name="twitter:image:alt" content="Proofbench: which Confluence or Jira app really does what you asked for? The same checks for every app, and results are never for sale.">
+<meta name="twitter:title" content="Proofbench: independent tests of Confluence and Jira apps">
+<meta name="twitter:description" content="Proofbench tests every Confluence or Jira app that claims to answer one popular request, with the same checks, and publishes what each app does and does not do.">
 <link rel="canonical" href="https://world-wide-nodes.github.io/App_Testing_Lab/">
 <meta name="google-site-verification" content="ty6ygACPej_Ym1TWfnwm_BV6bVyAmsCLeqcyxPA3-FA">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://world-wide-nodes.github.io/App_Testing_Lab/#lab","name":"Proofbench","url":"https://world-wide-nodes.github.io/App_Testing_Lab/","email":"proofbench.lab@proton.me"},{"@type":"WebSite","@id":"https://world-wide-nodes.github.io/App_Testing_Lab/#site","name":"Proofbench","url":"https://world-wide-nodes.github.io/App_Testing_Lab/","description":"Proofbench tests every Confluence app that claims to answer one popular request, with the same checks, and publishes what each app does and does not do.","publisher":{"@id":"https://world-wide-nodes.github.io/App_Testing_Lab/#lab"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://world-wide-nodes.github.io/App_Testing_Lab/#lab","name":"Proofbench","url":"https://world-wide-nodes.github.io/App_Testing_Lab/","email":"proofbench.lab@proton.me"},{"@type":"WebSite","@id":"https://world-wide-nodes.github.io/App_Testing_Lab/#site","name":"Proofbench","url":"https://world-wide-nodes.github.io/App_Testing_Lab/","description":"Proofbench tests every Confluence or Jira app that claims to answer one popular request, with the same checks, and publishes what each app does and does not do.","publisher":{"@id":"https://world-wide-nodes.github.io/App_Testing_Lab/#lab"}}]}</script>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/site.css?v=d49eef5ddd">
 </head>
@@ -75,7 +75,7 @@
   <div class="wrap hero-grid">
     <div>
       <a class="chip" href="c/sort-pages/"><span class="chip-label">In progress</span>Apps that keep Confluence pages sorted<svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      <h1 id="hero-title">Which Confluence app really does what you asked for?</h1>
+      <h1 id="hero-title">Which Confluence or Jira app really does what you asked for?</h1>
       <p class="lead">Proofbench installs every app that claims to answer one popular feature request, runs the same checks on each, and publishes what each app does and does not do.</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="method/">See how we test <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -149,7 +149,7 @@
     <div class="audiences">
       <article class="aud">
         <span class="icon-tile"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-search"/></svg></span>
-        <p class="kicker">For Confluence admins</p>
+        <p class="kicker">For Confluence and Jira admins</p>
         <h3>Find the app that really does it</h3>
         <p>Each comparison shows which apps passed which checks, what each costs per year at 10, 100 and 1,000 users, and how to repeat the test.</p>
         <ul class="ticks">
@@ -191,6 +191,14 @@
       <li class="card card-progress card-linked">
         <h3><a href="c/edit-inheritance/">Apps that pass edit restrictions down a page tree</a></h3>
         <p class="request">For the request <a href="https://jira.atlassian.com/browse/CONFCLOUD-5095" rel="nofollow noopener">CONFCLOUD-5095</a>, 974 votes, 533 watchers. 7 apps claim to answer it.</p>
+        <ol class="stages" role="list" aria-label="Stage"><li class="stage stage-done">Makers told</li><li class="stage stage-now" aria-current="step">Testing</li><li class="stage stage-next">Makers check results</li><li class="stage stage-next">Ready to publish</li><li class="stage stage-next">Published</li></ol>
+        <p class="progress-now"><strong>Now:</strong> We are running the same checks on each app.</p>
+        <p class="note">App names and results appear here once the comparison is published.</p>
+        <p class="card-cta" aria-hidden="true">Follow its progress <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></p>
+      </li>
+      <li class="card card-progress card-linked">
+        <h3><a href="c/default-values/">Apps that fill in default values for new Jira issues</a></h3>
+        <p class="request">For the request <a href="https://jira.atlassian.com/browse/JRACLOUD-4812" rel="nofollow noopener">JRACLOUD-4812</a>, 2,800 votes, 1,180 watchers. 9 apps claim to answer it.</p>
         <ol class="stages" role="list" aria-label="Stage"><li class="stage stage-now" aria-current="step">Makers told</li><li class="stage stage-next">Testing</li><li class="stage stage-next">Makers check results</li><li class="stage stage-next">Ready to publish</li><li class="stage stage-next">Published</li></ol>
         <p class="progress-now"><strong>Now:</strong> We have told each maker what we will check. Testing comes next.</p>
         <p class="note">App names and results appear here once the comparison is published.</p>
@@ -205,7 +213,7 @@
   <div class="wrap foot-grid">
     <div>
       <a class="brand" href=""><svg class="brand-mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect class="brand-tile" width="32" height="32" rx="8"/><g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="2.8" d="M10.6 12.4l3.5 3.5 7.3-7.7"/><path stroke-width="2.4" d="M7.5 20.6h17M10.7 20.6v3.3M21.3 20.6v3.3"/></g></svg><span>Proofbench</span></a>
-      <p>An independent test lab for Confluence apps. Every app that claims to answer a request gets the same checks, and buyers read the results for free.</p>
+      <p>An independent test lab for Confluence and Jira apps. Every app that claims to answer a request gets the same checks, and buyers read the results for free.</p>
     </div>
     <div>
       <h2>The lab</h2>
@@ -218,7 +226,7 @@
     </div>
     <div>
       <h2>Independence</h2>
-      <p><strong>Not affiliated with Atlassian.</strong> Atlassian and Confluence are trademarks of Atlassian.</p>
+      <p><strong>Not affiliated with Atlassian.</strong> Atlassian, Confluence and Jira are trademarks of Atlassian.</p>
       <p><strong>Makers can pay for deeper private reports and re-tests, never for results.</strong>
         <a href="makers/">What makers can buy</a></p>
     </div>

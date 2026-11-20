@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f0edfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15143a" media="(prefers-color-scheme: dark)">
+<title>Apps that fill in default values for new Jira issues · Proofbench</title>
+<meta name="description" content="A comparison in progress. Its results appear here once it is published.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Proofbench">
+<meta property="og:title" content="Apps that fill in default values for new Jira issues">
+<meta property="og:description" content="A comparison in progress. Its results appear here once it is published.">
+<meta property="og:url" content="https://world-wide-nodes.github.io/App_Testing_Lab/c/default-values/">
+<meta property="og:image" content="https://world-wide-nodes.github.io/App_Testing_Lab/assets/share-proofbench.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Proofbench: which Confluence or Jira app really does what you asked for? The same checks for every app, and results are never for sale.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://world-wide-nodes.github.io/App_Testing_Lab/assets/share-proofbench.png">
+<meta name="twitter:image:alt" content="Proofbench: which Confluence or Jira app really does what you asked for? The same checks for every app, and results are never for sale.">
+<meta name="twitter:title" content="Apps that fill in default values for new Jira issues">
+<meta name="twitter:description" content="A comparison in progress. Its results appear here once it is published.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/site.css?v=d49eef5ddd">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+  <symbol id="i-pass" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-partial" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M12 4.5a7.5 7.5 0 0 0 0 15z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-fail" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></symbol>
+  <symbol id="i-na" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M6.8 17.2L17.2 6.8"/></symbol>
+  <symbol id="i-dash" viewBox="0 0 24 24"><path d="M7 12h10"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4.5h5.5V10M19.5 4.5L11 13M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.8v.2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7.5l8 5.5 8-5.5"/></symbol>
+  <symbol id="i-checklist" viewBox="0 0 24 24"><path d="M4 6.5l1.6 1.6L8.8 5M4 12.5l1.6 1.6 3.2-3.1M4 18.5l1.6 1.6 3.2-3.1M12 7h8M12 13h8M12 19h8"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7.5h14M12 4.5l-7 3M12 4.5l7 3M5 7.5l-2.5 6h5zM19 7.5l-2.5 6h5z"/></symbol>
+  <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M16.5 3.5l3 3-3 3M4.5 11.5v-1a4 4 0 0 1 4-4h11M7.5 20.5l-3-3 3-3M19.5 12.5v1a4 4 0 0 1-4 4h-11"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5l5 5"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8.5 7l-5 5 5 5M15.5 7l5 5-5 5M13.5 4.5l-3 15"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-reply" viewBox="0 0 24 24"><path d="M5.5 19.5v-3.5h-1A1.5 1.5 0 0 1 3 14.5v-9A1.5 1.5 0 0 1 4.5 4h15A1.5 1.5 0 0 1 21 5.5v9a1.5 1.5 0 0 1-1.5 1.5H9.5z"/><path d="M7.5 8.5h9M7.5 12h6"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="M8.6 13.3L7.5 20.5l4.5-2.4 4.5 2.4-1.1-7.2"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.3 12.3l2.6 2.6 4.9-5.3"/></symbol>
+  <symbol id="i-report" viewBox="0 0 24 24"><path d="M14 3.5H7A1.5 1.5 0 0 0 5.5 5v14A1.5 1.5 0 0 0 7 20.5h10a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3.5V8h4.5M9 12.5h6M9 16h6"/></symbol>
+  <symbol id="i-retest" viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 1 1-2.3-5.4M19.5 4.5V9H15"/><path d="M9 12.3l2 2 4-4.3"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14.5" rx="2"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4M12 13v4M10 15h4"/></symbol>
+  <symbol id="i-site" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="12" rx="2"/><path d="M8.5 20h7M12 16.5V20"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5.5 21V4.5M5.5 5h11l-2.5 4 2.5 4h-11"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="../../"><svg class="brand-mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect class="brand-tile" width="32" height="32" rx="8"/><g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="2.8" d="M10.6 12.4l3.5 3.5 7.3-7.7"/><path stroke-width="2.4" d="M7.5 20.6h17M10.7 20.6v3.3M21.3 20.6v3.3"/></g></svg><span>Proofbench</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <ul class="nav">
+        <li><a href="../../">Comparisons</a></li>
+        <li><a href="../../method/">How we test</a></li>
+        <li><a href="../../makers/"><span class="nav-long">For app makers</span><span class="nav-short" aria-hidden="true">Makers</span></a></li>
+        <li><a href="../../about/">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<article>
+<header class="page-head">
+  <div class="wrap">
+    <p class="crumbs"><a href="../../#comparisons"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg>All comparisons</a></p>
+    <p class="kicker">Comparison in progress</p>
+    <h1>Apps that fill in default values for new Jira issues</h1>
+    <p class="lead">We are testing every Jira Cloud app that claims to answer the request <a href="https://jira.atlassian.com/browse/JRACLOUD-4812" rel="nofollow noopener">JRACLOUD-4812</a>, 2,800 votes, 1,180 watchers, with the same checks for each. The results appear on this page once the comparison is published.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="section section-first" aria-labelledby="stage-title">
+    <div class="section-head">
+      <h2 id="stage-title">Where it stands</h2>
+      <p class="note">Each maker sees their own results first and has three working days to correct a fact or to object. <a href="../../method/">How we test</a></p>
+    </div>
+    <ul class="cards">
+      <li class="card card-progress">
+        <h3>Apps that fill in default values for new Jira issues</h3>
+        <p class="request">For the request <a href="https://jira.atlassian.com/browse/JRACLOUD-4812" rel="nofollow noopener">JRACLOUD-4812</a>, 2,800 votes, 1,180 watchers. 9 apps claim to answer it.</p>
+        <ol class="stages" role="list" aria-label="Stage"><li class="stage stage-now" aria-current="step">Makers told</li><li class="stage stage-next">Testing</li><li class="stage stage-next">Makers check results</li><li class="stage stage-next">Ready to publish</li><li class="stage stage-next">Published</li></ol>
+        <p class="progress-now"><strong>Now:</strong> We have told each maker what we will check. Testing comes next.</p>
+        <p class="note">App names and results appear here once the comparison is published.</p>
+      </li>
+    </ul>
+  </section>
+</div>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="../../"><svg class="brand-mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect class="brand-tile" width="32" height="32" rx="8"/><g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="2.8" d="M10.6 12.4l3.5 3.5 7.3-7.7"/><path stroke-width="2.4" d="M7.5 20.6h17M10.7 20.6v3.3M21.3 20.6v3.3"/></g></svg><span>Proofbench</span></a>
+      <p>An independent test lab for Confluence and Jira apps. Every app that claims to answer a request gets the same checks, and buyers read the results for free.</p>
+    </div>
+    <div>
+      <h2>The lab</h2>
+      <ul>
+        <li><a href="../../method/">How we test</a></li>
+        <li><a href="../../makers/">For app makers</a></li>
+        <li><a href="../../about/">About</a></li>
+        <li><a href="../../about/#report">Report a mistake</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Independence</h2>
+      <p><strong>Not affiliated with Atlassian.</strong> Atlassian, Confluence and Jira are trademarks of Atlassian.</p>
+      <p><strong>Makers can pay for deeper private reports and re-tests, never for results.</strong>
+        <a href="../../makers/">What makers can buy</a></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -494,6 +494,10 @@ img, svg { max-width: 100%; }
   background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-2); }
 .offer h3 { font-size: 1.25rem; margin: 18px 0 4px; }
 .offer .price { margin: 0 0 6px; font-size: 2rem; font-weight: 750; letter-spacing: -0.02em; line-height: 1.2; }
+.offer .price .was { margin-right: 10px; font-size: 1.25rem; font-weight: 600; color: var(--muted);
+  text-decoration: line-through; text-decoration-thickness: 2px; }
+.offer .price-terms { align-self: flex-start; margin: 0 0 10px; padding: 3px 10px; border-radius: 999px;
+  background: var(--brand-soft); color: var(--brand-strong); font-size: 0.8125rem; font-weight: 650; }
 .offer .offer-what { color: var(--text-2); margin-bottom: 18px; }
 .offer .ticks { margin: 0 0 26px; font-size: 0.9688rem; }
 .offer .btn { margin-top: auto; width: 100%; }

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f0edfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15143a" media="(prefers-color-scheme: dark)">
+<title>Requests no app answers yet · Proofbench</title>
+<meta name="description" content="The most voted Jira and Confluence requests with no app linked on their thread, free, and a monthly full edition for app builders.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Proofbench">
+<meta property="og:title" content="Requests no app answers yet">
+<meta property="og:description" content="The most voted Jira and Confluence requests with no app linked on their thread, free, and a monthly full edition for app builders.">
+<meta property="og:url" content="https://world-wide-nodes.github.io/App_Testing_Lab/requests/">
+<meta property="og:image" content="https://world-wide-nodes.github.io/App_Testing_Lab/assets/share-proofbench.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Proofbench: which Confluence or Jira app really does what you asked for? The same checks for every app, and results are never for sale.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://world-wide-nodes.github.io/App_Testing_Lab/assets/share-proofbench.png">
+<meta name="twitter:image:alt" content="Proofbench: which Confluence or Jira app really does what you asked for? The same checks for every app, and results are never for sale.">
+<meta name="twitter:title" content="Requests no app answers yet">
+<meta name="twitter:description" content="The most voted Jira and Confluence requests with no app linked on their thread, free, and a monthly full edition for app builders.">
+<link rel="canonical" href="https://world-wide-nodes.github.io/App_Testing_Lab/requests/">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css?v=07ff1fd117">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+  <symbol id="i-pass" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-partial" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M12 4.5a7.5 7.5 0 0 0 0 15z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-fail" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></symbol>
+  <symbol id="i-na" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M6.8 17.2L17.2 6.8"/></symbol>
+  <symbol id="i-dash" viewBox="0 0 24 24"><path d="M7 12h10"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4.5h5.5V10M19.5 4.5L11 13M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.8v.2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7.5l8 5.5 8-5.5"/></symbol>
+  <symbol id="i-checklist" viewBox="0 0 24 24"><path d="M4 6.5l1.6 1.6L8.8 5M4 12.5l1.6 1.6 3.2-3.1M4 18.5l1.6 1.6 3.2-3.1M12 7h8M12 13h8M12 19h8"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M8 20h8M5 7.5h14M12 4.5l-7 3M12 4.5l7 3M5 7.5l-2.5 6h5zM19 7.5l-2.5 6h5z"/></symbol>
+  <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M16.5 3.5l3 3-3 3M4.5 11.5v-1a4 4 0 0 1 4-4h11M7.5 20.5l-3-3 3-3M19.5 12.5v1a4 4 0 0 1-4 4h-11"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5l5 5"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8.5 7l-5 5 5 5M15.5 7l5 5-5 5M13.5 4.5l-3 15"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-reply" viewBox="0 0 24 24"><path d="M5.5 19.5v-3.5h-1A1.5 1.5 0 0 1 3 14.5v-9A1.5 1.5 0 0 1 4.5 4h15A1.5 1.5 0 0 1 21 5.5v9a1.5 1.5 0 0 1-1.5 1.5H9.5z"/><path d="M7.5 8.5h9M7.5 12h6"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="M8.6 13.3L7.5 20.5l4.5-2.4 4.5 2.4-1.1-7.2"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.3 12.3l2.6 2.6 4.9-5.3"/></symbol>
+  <symbol id="i-report" viewBox="0 0 24 24"><path d="M14 3.5H7A1.5 1.5 0 0 0 5.5 5v14A1.5 1.5 0 0 0 7 20.5h10a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3.5V8h4.5M9 12.5h6M9 16h6"/></symbol>
+  <symbol id="i-retest" viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 1 1-2.3-5.4M19.5 4.5V9H15"/><path d="M9 12.3l2 2 4-4.3"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14.5" rx="2"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4M12 13v4M10 15h4"/></symbol>
+  <symbol id="i-site" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="12" rx="2"/><path d="M8.5 20h7M12 16.5V20"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5.5 21V4.5M5.5 5h11l-2.5 4 2.5 4h-11"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="../"><svg class="brand-mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect class="brand-tile" width="32" height="32" rx="8"/><g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="2.8" d="M10.6 12.4l3.5 3.5 7.3-7.7"/><path stroke-width="2.4" d="M7.5 20.6h17M10.7 20.6v3.3M21.3 20.6v3.3"/></g></svg><span>Proofbench</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <ul class="nav">
+        <li><a href="../">Comparisons</a></li>
+        <li><a href="../method/"><span class="nav-long">How we test</span><span class="nav-short" aria-hidden="true">Method</span></a></li>
+        <li><a href="../moving-to-cloud/"><span class="nav-long">Moving to Cloud</span><span class="nav-short" aria-hidden="true">Cloud</span></a></li>
+        <li><a href="../makers/"><span class="nav-long">For app makers</span><span class="nav-short" aria-hidden="true">Makers</span></a></li>
+        <li><a href="../about/">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<header class="page-head">
+  <div class="wrap">
+    <p class="kicker">For app builders</p>
+    <h1>What Jira and Confluence users ask for that no app sells yet</h1>
+    <p class="lead">Every week we rank the most voted open requests on Atlassian's public tracker and count the apps whose makers linked them on each request. Here are the top 10 with no app linked, free.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="mailto:proofbench.lab@proton.me?subject=Requests%20report%3A%20full%20edition"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-mail"/></svg>Order the full edition</a>
+      <a class="btn btn-secondary" href="#top">See the free top 10</a>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="top" aria-labelledby="top-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Free top 10</p>
+      <h2 id="top-title">The most voted requests with no app linked</h2>
+      <p class="lead">From Atlassian&#x27;s public tracker, read on 27 November 2026. An app counts when its maker linked it on the request&#x27;s thread, so no app linked is a lead to check, not proof that no app exists.</p>
+    </div>
+    <div class="matrix table-scroll"><table class="data-table">
+      <thead><tr><th scope="col">Request</th><th scope="col">Product</th><th scope="col" class="num">Votes</th><th scope="col" class="num">Watchers</th><th scope="col">Atlassian's status</th></tr></thead>
+      <tbody><tr><th scope="row"><a href="https://jira.atlassian.com/browse/JRACLOUD-91572">JRACLOUD-91572</a><span class="req-title">Option to drill down to the Subtask level in the Timeline (Formerly Roadmap)</span></th><td data-label="Product">Jira</td><td class="num" data-label="Votes">1,847</td><td class="num" data-label="Watchers">797</td><td data-label="Status"><span class="pill pill-partial">In Progress</span></td></tr><tr><th scope="row"><a href="https://jira.atlassian.com/browse/JRACLOUD-96247">JRACLOUD-96247</a><span class="req-title">Allow status field to be moved/placed anywhere on the screen</span></th><td data-label="Product">Jira</td><td class="num" data-label="Votes">1,810</td><td class="num" data-label="Watchers">374</td><td data-label="Status"><span class="pill pill-pass">Not Being Considered</span></td></tr><tr><th scope="row"><a href="https://jira.atlassian.com/browse/JRACLOUD-6851">JRACLOUD-6851</a><span class="req-title">Allow more than one custom field context to be associated with the same project but different issue types</span></th><td data-label="Product">Jira</td><td class="num" data-label="Votes">1,628</td><td class="num" data-label="Watchers">852</td><td data-label="Status"><span class="pill pill-partial">Waiting for Release</span></td></tr><tr><th scope="row"><a href="https://jira.atlassian.com/browse/JRACLOUD-846">JRACLOUD-846</a><span class="req-title">Support for subcomponents</span></th><td data-label="Product">Jira</td><td class="num" data-label="Votes">1,026</td><td class="num" data-label="Watchers">491</td><td data-label="Status">Gathering Interest</td></tr><tr><th scope="row"><a href="https://jira.atlassian.com/browse/JRACLOUD-46206">JRACLOUD-46206</a><span class="req-title">Provide the ability for Cloud Admins to access application logs</span></th><td data-label="Product">Jira</td><td class="num" data-label="Votes">1,023</td><td class="num" data-label="Watchers">409</td><td data-label="Status">Gathering Interest</td></tr><tr><th scope="row"><a href="https://jira.atlassian.com/browse/JRACLOUD-80451">JRACLOUD-80451</a><span class="req-title">Add the ability to disable Atlassian&#x27;s Advertisement in a site</span></th><td data-label="Product">Jira</td><td class="num" data-label="Votes">990</td><td class="num" data-label="Watchers">587</td><td data-label="Status">Gathering Interest</td></tr><tr><th scope="row"><a href="https://jira.atlassian.com/browse/JRACLOUD-91568">JRACLOUD-91568</a><span class="req-title">As a project manager, in order to have a big picture of my projects, i need to see epic from different projects in the Roadmap</span></th><td data-label="Product">Jira</td><td class="num" data-label="Votes">966</td><td class="num" data-label="Watchers">320</td><td data-label="Status">Gathering Interest</td></tr><tr><th scope="row"><a href="https://jira.atlassian.com/browse/CONFCLOUD-71300">CONFCLOUD-71300</a><span class="req-title">Ability to disable the personal spaces creation automatically</span></th><td data-label="Product">Confluence</td><td class="num" data-label="Votes">946</td><td class="num" data-label="Watchers">353</td><td data-label="Status">Gathering Interest</td></tr><tr><th scope="row"><a href="https://jira.atlassian.com/browse/JRACLOUD-85691">JRACLOUD-85691</a><span class="req-title">Custom swimlanes / more Group By options on team-managed projects</span></th><td data-label="Product">Jira</td><td class="num" data-label="Votes">944</td><td class="num" data-label="Watchers">395</td><td data-label="Status"><span class="pill pill-partial">In Progress</span></td></tr><tr><th scope="row"><a href="https://jira.atlassian.com/browse/CONFCLOUD-67862">CONFCLOUD-67862</a><span class="req-title">Bring back the option to add macros within a numbered or bulleted list</span></th><td data-label="Product">Confluence</td><td class="num" data-label="Votes">833</td><td class="num" data-label="Watchers">361</td><td data-label="Status">Under Consideration</td></tr></tbody>
+    </table></div>
+    <p class="note">Votes and watchers are as we read them. In Progress and Waiting for Release mean Atlassian is building it. Not Being Considered means Atlassian does not plan to build it.</p>
+  </div>
+</section>
+
+<section class="section section-alt" id="edition" aria-labelledby="edition-title">
+  <div class="wrap offer-band">
+    <div>
+      <p class="kicker">The full edition</p>
+      <h2 id="edition-title">Every month, the whole picture</h2>
+      <p class="lead">The free top 10 shows the gaps. The full edition shows where to look next.</p>
+      <ul class="ticks">
+        <li>The 60 most voted open requests for Jira Cloud and Confluence Cloud</li>
+        <li>Every app whose maker linked each request, by name, with its store page</li>
+        <li>The requests with only one or two apps so far</li>
+        <li>Atlassian's own status, so you see what it is building and what it will not build</li>
+      </ul>
+      <p class="note">A PDF for your own use. A new edition comes out every month.</p>
+    </div>
+    <div class="offers offers-one">
+      <article class="offer">
+        <span class="icon-tile"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-report"/></svg></span>
+        <h3>The full edition</h3>
+        <p class="price">35 euros</p>
+        <p class="offer-what">A PDF each month, for app builders.</p>
+        <ul class="ticks"><li>All 60 requests, with the apps that claim each</li><li>The gaps and the requests with one or two apps</li><li>Atlassian&#x27;s status on every request</li></ul>
+        <a class="btn btn-primary" href="mailto:proofbench.lab@proton.me?subject=Requests%20report%3A%20full%20edition"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-mail"/></svg>Order the full edition</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="../"><svg class="brand-mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect class="brand-tile" width="32" height="32" rx="8"/><g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="2.8" d="M10.6 12.4l3.5 3.5 7.3-7.7"/><path stroke-width="2.4" d="M7.5 20.6h17M10.7 20.6v3.3M21.3 20.6v3.3"/></g></svg><span>Proofbench</span></a>
+      <p>An independent test lab for Confluence and Jira apps. Every app that claims to answer a request gets the same checks, and buyers read the results for free.</p>
+    </div>
+    <div>
+      <h2>The lab</h2>
+      <ul>
+        <li><a href="../method/">How we test</a></li>
+        <li><a href="../moving-to-cloud/">Moving to Cloud</a></li>
+        <li><a href="../makers/">For app makers</a></li>
+        <li><a href="../requests/">Requests no app answers</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="../about/#report">Report a mistake</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Independence</h2>
+      <p><strong>Not affiliated with Atlassian.</strong> Atlassian, Confluence and Jira are trademarks of Atlassian.</p>
+      <p><strong>Makers can pay for deeper private reports and re-tests, never for results.</strong>
+        <a href="../makers/">What makers can buy</a></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

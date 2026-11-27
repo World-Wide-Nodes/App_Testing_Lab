@@ -489,7 +489,8 @@ img, svg { max-width: 100%; }
 
 /* For app makers ---------------------------------------------------------------------- */
 .offers { display: grid; gap: 20px; }
-@media (min-width: 960px) { .offers { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 720px) { .offers { grid-template-columns: repeat(2, 1fr); } }
+.offers.offers-one { grid-template-columns: minmax(0, 1fr); max-width: 30rem; }
 .offer { display: flex; flex-direction: column; padding: 26px 24px; border-radius: 22px;
   background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-2); }
 .offer h3 { font-size: 1.25rem; margin: 18px 0 4px; }
@@ -733,3 +734,50 @@ pre { white-space: pre-wrap; font-size: 0.875rem; }
   color: var(--text); font: 0.8125rem/1.5 var(--mono); resize: vertical; }
 .badge-copy-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 10px 0 14px; }
 .badge-copy-row .note { margin: 0; }
+
+/* Moving to Cloud and the requests report ------------------------------------------- */
+.offer-band { display: grid; gap: 28px; }
+@media (min-width: 960px) {
+  .offer-band { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 56px;
+    align-items: start; }
+}
+.offer-band .numbered, .offer-band .ticks { margin-bottom: 18px; }
+.table-title { margin: 32px 0 12px; font-size: 1.25rem; }
+.section-head + .table-title { margin-top: 8px; }
+.matrix.table-scroll { overflow-x: auto; }
+.data-table { width: 100%; min-width: 640px; border-collapse: collapse; overflow-wrap: normal; }
+.data-table th, .data-table td { padding: 12px; text-align: left; vertical-align: top;
+  border-bottom: 1px solid var(--line); }
+.data-table thead th { background: var(--surface-2); font-size: 0.8125rem; font-weight: 600;
+  color: var(--muted); vertical-align: bottom; line-height: 1.35; }
+.data-table tbody tr:last-child > * { border-bottom: 0; }
+.data-table tbody th { font-weight: 600; }
+.data-table tbody th a { color: var(--text); font-weight: 700; }
+.data-table .rank { width: 2.5rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.data-table .num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.data-table .req-title { display: block; margin-top: 2px; font-weight: 500; color: var(--text-2); }
+.data-table .also { display: block; margin-top: 6px; font-size: 0.875rem; }
+.data-table .pill { white-space: nowrap; }
+@media (min-width: 900px) {
+  .data-table th:first-child, .data-table td:first-child { padding-left: 20px; }
+  .data-table th:last-child, .data-table td:last-child { padding-right: 20px; }
+}
+.table-scroll + .note { margin-top: 16px; }
+@media (max-width: 699px) {
+  .data-table { min-width: 0; }
+  .data-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); }
+  .data-table, .data-table tbody { display: block; }
+  .data-table tr { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 10px;
+    padding: 14px 16px; border-bottom: 1px solid var(--line); }
+  .data-table tbody tr:last-child { border-bottom: 0; }
+  .data-table th, .data-table td { padding: 0; border: 0; }
+  .data-table tbody th { grid-column: 1 / -1; }
+  .data-table td.rank + th { grid-column: auto; }
+  .data-table .rank { width: auto; }
+  .data-table td[data-label] { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px 10px;
+    align-items: baseline; text-align: left; }
+  .data-table td[data-label]::before { content: attr(data-label); min-width: 7.5rem;
+    font-size: 0.8125rem; color: var(--muted); }
+}
+.cloud-callout { margin-top: 28px; }

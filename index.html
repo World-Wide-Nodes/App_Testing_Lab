@@ -26,7 +26,7 @@
 <meta name="google-site-verification" content="ty6ygACPej_Ym1TWfnwm_BV6bVyAmsCLeqcyxPA3-FA">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://world-wide-nodes.github.io/App_Testing_Lab/#lab","name":"Proofbench","url":"https://world-wide-nodes.github.io/App_Testing_Lab/","email":"proofbench.lab@proton.me"},{"@type":"WebSite","@id":"https://world-wide-nodes.github.io/App_Testing_Lab/#site","name":"Proofbench","url":"https://world-wide-nodes.github.io/App_Testing_Lab/","description":"Proofbench tests every Confluence or Jira app that claims to answer one popular request, with the same checks, and publishes what each app does and does not do.","publisher":{"@id":"https://world-wide-nodes.github.io/App_Testing_Lab/#lab"}}]}</script>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/site.css?v=e1f62f3f7e">
+<link rel="stylesheet" href="assets/site.css?v=07ff1fd117">
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" class="sprite" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
@@ -63,7 +63,8 @@
     <nav class="site-nav" aria-label="Main">
       <ul class="nav">
         <li><a href="" aria-current="page">Comparisons</a></li>
-        <li><a href="method/">How we test</a></li>
+        <li><a href="method/"><span class="nav-long">How we test</span><span class="nav-short" aria-hidden="true">Method</span></a></li>
+        <li><a href="moving-to-cloud/"><span class="nav-long">Moving to Cloud</span><span class="nav-short" aria-hidden="true">Cloud</span></a></li>
         <li><a href="makers/"><span class="nav-long">For app makers</span><span class="nav-short" aria-hidden="true">Makers</span></a></li>
         <li><a href="about/">About</a></li>
       </ul>
@@ -114,7 +115,7 @@
       </li>
       <li>
         <span class="icon-tile"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-scale"/></svg></span>
-        <div><h3>Makers cannot buy results</h3><p>They can pay for a private report, a <span class="nowrap">re-test</span> or an earlier date. Never for a result, a rank or a word.</p></div>
+        <div><h3>Makers cannot buy results</h3><p>They can pay for a private report, a <span class="nowrap">re-test,</span> an earlier date or a listing review. Never for a result, a rank or a word.</p></div>
       </li>
       <li>
         <span class="icon-tile"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-repeat"/></svg></span>
@@ -172,6 +173,14 @@
         <a class="btn btn-primary" href="makers/">What makers get <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </article>
     </div>
+    <aside class="callout cloud-callout" aria-labelledby="cloud-title">
+      <span class="icon-tile"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-site"/></svg></span>
+      <div>
+        <h2 id="cloud-title">Moving to Cloud before Data Center ends?</h2>
+        <p>Atlassian ends Data Center on 28 March 2029. See which popular apps have a Cloud version, free, or send us your list of apps and we check what each one does in Cloud.</p>
+        <a class="btn btn-secondary" href="moving-to-cloud/">Check your apps <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </aside>
   </div>
 </section>
 
@@ -197,7 +206,7 @@
     <ul class="cards">
       <li class="card card-progress card-linked">
         <h3><a href="c/copy-space/">Apps that copy a whole Confluence space</a></h3>
-        <p class="request">For the request <a href="https://jira.atlassian.com/browse/CONFCLOUD-3191" rel="nofollow noopener">CONFCLOUD-3191</a>, 884 votes, 411 watchers. 4 apps claim to answer it.</p>
+        <p class="request">For the request <a href="https://jira.atlassian.com/browse/CONFCLOUD-3191" rel="nofollow noopener">CONFCLOUD-3191</a>, 883 votes, 411 watchers. 4 apps claim to answer it.</p>
         <ol class="stages" role="list" aria-label="Stage"><li class="stage stage-now" aria-current="step">Makers told</li><li class="stage stage-next">Testing</li><li class="stage stage-next">Makers check results</li><li class="stage stage-next">Ready to publish</li><li class="stage stage-next">Published</li></ol>
         <p class="progress-now"><strong>Now:</strong> We have told each maker what we will check. Testing comes next.</p>
         <p class="note">App names and results appear here once the comparison is published.</p>
@@ -234,7 +243,9 @@
       <h2>The lab</h2>
       <ul>
         <li><a href="method/">How we test</a></li>
+        <li><a href="moving-to-cloud/">Moving to Cloud</a></li>
         <li><a href="makers/">For app makers</a></li>
+        <li><a href="requests/">Requests no app answers</a></li>
         <li><a href="about/">About</a></li>
         <li><a href="about/#report">Report a mistake</a></li>
       </ul>
